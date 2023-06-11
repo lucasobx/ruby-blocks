@@ -13,12 +13,12 @@ class Flyer
 end
 
 flyers = []
-#criando 5 objetos flyer e passando para a matriz
+#cria 5 objetos flyer e passa para a matriz
 1.upto(5) { |n| flyers << Flyer.new("Flyer #{n}", "flyer#{n}@email.com", n * 1000)}
 
 flyers.each { |f| puts "#{f.name} - #{f.miles_flown} miles" }
 
-#acumulando total de milhas voadas
+#acumula total de milhas voadas
 total = 0
 flyers.each do |f|
   total += f.miles_flown
@@ -27,11 +27,11 @@ puts "\nTotal miles flown:'#{total}"
 puts "\n"
 
 promotions = { "United" => 1.5, "Delta" => 2.0, "Lufthansa" => 2.5 }
-#imprimindo promoções
+#imprime promoções
 promotions.each { |a, b| puts "Earn #{b}x miles by flying #{a}!" }
 puts "\n"
 
-#iterador dentro de iterador imprimindo milhas que cada um ganharia com cada companhia
+#iterador dentro de iterador: imprime milhas que cada um ganharia com cada companhia
 flyers.each do |f|
   promotions.each do |a, m|
     puts "#{f.name} could earn #{f.miles_flown * m} miles by flying #{a}"
