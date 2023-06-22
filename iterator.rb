@@ -1,9 +1,9 @@
 def three_times
-1.upto(3) { |count| yield count }
+1.upto(3) { |n| yield n }
 end
 
-three_times do |number|
-  puts "#{number} situp"
-  puts "#{number} pushup"
-  puts "#{number} chinup"
+three_times do |n|
+  puts "#{n} situp"
+  puts "#{n} pushup"
+  puts "#{n} chinup"
 end
