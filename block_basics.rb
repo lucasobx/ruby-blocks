@@ -13,7 +13,6 @@ class Flyer
 end
 
 flyers = []
-#cria 5 objetos flyer e passa para a matriz
 1.upto(5) { |n| flyers << Flyer.new("Flyer #{n}", "flyer#{n}@email.com", n * 1000)}
 
 flyers.each { |f| puts "#{f.name} - #{f.miles_flown} miles" }
@@ -40,7 +39,6 @@ end
 puts "\n"
 
 #BÔNUS
-#iterador step (possui limite superior e um intervalo)
 1.step(9, 2) do |n|
   puts "#{n} situp"
   puts "#{n} pushup"
